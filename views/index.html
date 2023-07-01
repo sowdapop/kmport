@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/styles/portfolio.css" />
+    <title>Kayla McDanel Portfolio</title>
+</head>
+
+<body>
+    <div class="nav-first">
+      <nav>
+        <ul>
+            <li>
+                <a href="../views/index.html">Home</a>
+            </li>
+            <li><a href="../views/dev.html">Dev Projects</a></li>
+            <li><a href="../views/design.html">Design Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/kayla-mcdanel/" target="_blank">
+                <span class="fab fa-linkedin" aria-hidden="true"></span>
+                <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li><a href="https://www.github.com/sowdapop" target="_blank">
+                <span class="fab fa-github-square" aria-hidden="true"></span>
+                <span class="sr-only">Github</span>
+                </a>
+            </li>
+            <li><a href="../public/docs/ksmcv.pdf" target="_blank" class="button">Resume</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-sec"></div>
+
+
+    <section id="intro">
+      <p class="name">Hi, my name is <span>Kayla McDanel</span></p>
+      <span class="first-text">
+        I like to </span>
+        <span id="typewriter"></span>
+            <span id="cursor">|</span>
+           
+    </section>
+    
+    <div class="gradient"></div>
+    <div class="c-heroImageGrid">
+        <div class="container">
+            <div class="column"></div>
+            <div class="column">
+                <div class="row"></div>
+                <div class="row">
+                    <div>
+                        <div class="text">
+                            <h6>
+                                I am a web developer<br>
+                                in Canton, Georgia.
+                            </h6>
+                            <p>
+                                Having initially started my education  in fine arts, 
+                                I enjoy making functional solutions that also appeal to the eye. When not in front of the computer, 
+                                I enjoy all things food and music. You can find me watching a Braves games, with family and friends, 
+                                gardening with my dog, riding my horse, or simply reading a book by myself.
+                            </p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="row"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="gradient"></div>
+
+    <section id="contact">
+      <p>
+        I'm always interested in creating or collaborating!
+      </p>
+      <p><a href="mailto:ks.mcdanel@gmail.com">Email me</a></p>
+                </section>
+            </div>
+
+
+
+    <div class="gradient"></div>
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/kayla-mcdanel/" target="_blank">
+                        <span class="fab fa-linkedin" aria-hidden="true"></span>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                            <a href="https://www.github.com/sowdapop" target="_blank">
+                                <span class="fab fa-github-square" aria-hidden="true"></span>
+                                <span class="sr-only">Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ks.mcdanel@gmail.com">
+                                <span class="fas fa-envelope" aria-hidden="true"></span>
+                                <span class="sr-only">Email</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p><small>&copy; 2022 Kayla McDanel. All rights reserved.</small></p>
+                </footer>
+
+                
+                <script>
+                    // typewriter function author: Tom Is Loading
+                    // modified by Kayla McDanel
+                    // url: https://github.com/TomIsLoading/typing-animation/tree/main
+
+                    function sleep(ms) {
+                      return new Promise((resolve) => setTimeout(resolve, ms));
+                    }
+              
+                    const phrases = ["create.", "think.", "design.", "code."];
+                    const el = document.getElementById("typewriter");
+              
+                    let sleepTime = 100;
+              
+                    let curPhraseIndex = 0;
+              
+                    const writeLoop = async () => {
+                      while (true) {
+                        let curWord = phrases[curPhraseIndex];
+              
+                        for (let i = 0; i < curWord.length; i++) {
+                          el.innerText = curWord.substring(0, i + 1);
+                          await sleep(sleepTime);
+                        }
+              
+                        await sleep(sleepTime * 10);
+              
+                        for (let i = curWord.length; i > 0; i--) {
+                          el.innerText = curWord.substring(0, i - 1);
+                          await sleep(sleepTime);
+                        }
+              
+                        await sleep(sleepTime * 5);
+              
+                        if (curPhraseIndex === phrases.length - 1) {
+                          curPhraseIndex = 0;
+                        } else {
+                          curPhraseIndex++;
+                        }
+                      }
+                    };
+              
+                    writeLoop();
+                  </script>
+</body>
+
+</html>
